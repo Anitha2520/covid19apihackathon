@@ -17,11 +17,11 @@ active.className="p-3";
 
 let deaths = document.createElement("div");
 deaths.setAttribute("id","deaths");
-deaths.className="p-1";
+deaths.className="p-2";
 
 let recovered = document.createElement("div");
 recovered.setAttribute("id","recovered");
-recovered.className="p-1";
+recovered.className="p-2";
 
 div.append(input,button,active,deaths,recovered);
 document.body.append(div);
@@ -36,8 +36,8 @@ async function foo(){
  console.log(res2[index]);
  console.log(res2[index].Active);
  active.innerHTML = `Total Active cases: ${res2[index].Active}`;
-deaths.innerHTML =  `Total Active cases: ${res2[index].Deaths}`;
-recovered.innerHTML = `Total Active cases: ${res2[index].Recovered}`;
+deaths.innerHTML =  `Total Deaths cases: ${res2[index].Deaths}`;
+recovered.innerHTML = `Total Recovered cases: ${res2[index].Recovered}`;
   } catch(error){
     console.log(error);
   }
