@@ -13,7 +13,7 @@ button.addEventListener("click",foo);
 
 let active = document.createElement("div");
 active.setAttribute("id","active");
-active.className="p-3";
+active.className="p-2";
 
 let deaths = document.createElement("div");
 deaths.setAttribute("id","deaths");
