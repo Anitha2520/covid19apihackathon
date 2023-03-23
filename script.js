@@ -28,16 +28,16 @@ document.body.append(div);
 
 async function foo(){
   try {
-  let res =  document.getElementById("country").value;
- let url = `https://api.covid19api.com/total/dayone/country/${res}`;
- let res1 = await fetch(url);
- let res2 = await res1.json();
- var index = res2.length-1;
- console.log(res2[index]);
- console.log(res2[index].Active);
- active.innerHTML = `Total Active cases: ${res2[index].Active}`;
-deaths.innerHTML =  `Total Deaths cases: ${res2[index].Deaths}`;
-recovered.innerHTML = `Total Recovered cases: ${res2[index].Recovered}`;
+    let res =  document.getElementById("country").value;
+    let url = `https://api.covid19api.com/total/dayone/country/${res}`;
+    let res1 = await fetch(url);
+    let res2 = await res1.json();
+    var index = res2.length-1;
+    console.log(res2[index]);
+    console.log(res2[index].Active);
+    active.innerHTML = `Total Active cases: ${res2[index].Active}`;
+    deaths.innerHTML =  `Total Deaths cases: ${res2[index].Deaths}`;
+    recovered.innerHTML = `Total Recovered cases: ${res2[index].Recovered}`;
   } catch(error){
     console.log(error);
   }
